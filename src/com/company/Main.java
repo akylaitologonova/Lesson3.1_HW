@@ -8,6 +8,7 @@ public class Main {
                 7.6, 3.5, -5.8, -7.7, -23.5, -34.4, 56.3};
 
         System.out.println("первое отрицательное число:" + negativ(numbers));
+        System.out.println("по возрастанию" + bubbleSort(int[]));
 
 
 
@@ -30,6 +31,20 @@ public class Main {
 
     }
 
+     public static void bubbleSort(int[] arr){
+
+        for(int i = arr.length-1 ; i > 0 ; i--){
+            for(int j = 0 ; j < i ; j++){
+
+                if( arr[j] > arr[j+1] ){
+                    int tmp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
+            }
+        }
+    }
+
 
     public static double negativ(double[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -38,5 +53,9 @@ public class Main {
             }
         }
         return -1;
+
+
+
     }
+
 }
